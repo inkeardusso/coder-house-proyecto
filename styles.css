@@ -12,7 +12,7 @@
     --grey-light: rgb(220, 218, 214);
 
     :root {
-    --apple-footer-bg: #161617; /* El negro exacto de Apple */
+    --apple-footer-bg: #161617; /* Colores sacados de la paleta de Apple */
     --apple-text-main: #f5f5f7;
     --apple-text-dim: #86868b;
     --apple-text-link: #2997ff;
@@ -134,12 +134,12 @@ body::after {
 
 .info-text:hover { color: var(--rust-accent); }
 
-/* Nav Bar - El efecto Glassmorphism de Apple */
+/* Nav Bar - El efecto Glassmorphism tipo Apple */
 .nav-apple {
     position: sticky;
     top: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.85); /* Fondo blanco traslúcido */
+    background-color: rgba(255, 255, 255, 0.85); 
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
@@ -162,7 +162,7 @@ body::after {
     margin: 0;
 }
 
-/* Botones Cápsula Apple */
+/* Botones Cápsula  */
 .nav__btn {
     text-decoration: none !important;
     color: rgba(26, 26, 27, 0.9) !important;
@@ -177,7 +177,7 @@ body::after {
     background-color: transparent;
 }
 
-/* Animación Hover Awwwards */
+/* Animación Hover  */
 .nav__btn:hover {
     background-color: var(--rust-accent) !important;
     color: #ffffff !important;
@@ -211,7 +211,7 @@ body::after {
 .hero {
     position: relative;
     height: 100vh; /* Ocupa el alto total de la pantalla */
-    min-height: 35rem; /* Evita que se colapse en pantallas muy pequeñas */
+    min-height: 35rem; /* Evitamos que se colapse en pantallas muy pequeñas */
     width: 100%;
     overflow: hidden;
     background-color: var(--iron-black);
@@ -266,7 +266,7 @@ body::after {
     position: relative;
     z-index: 10;
     padding-left: 8%;
-    max-width: 50rem; /* Limita el ancho del texto para mejor lectura */
+    max-width: 50rem; /* Limitar  ancho del texto para mejor lectura */
     text-align: left;
     animation: fadeInUp 0.8s ease-out;
 }
@@ -282,11 +282,9 @@ body::after {
     font-weight: 600;
 }
 
-/* Siguiendo la regla de oro: Legibilidad en mobile vs Impacto en Desktop */
 .title--large {
     display: block;
     font-family: var(--font-industrial);
-    /* Bajamos el tamaño: máximo 7rem en lugar de 12rem */
     font-size: clamp(2.5rem, 8vw, 7rem); 
     font-weight: 900;
     line-height: 0.6;
@@ -305,16 +303,16 @@ body::after {
 /* --- TEXTO DEL HERO (Cuerpo) --- */
 .hero__text {
     font-family: var(--font-clean);
-    /* En mobile 1.1rem, en escritorio sube a 1.25rem */
     font-size: clamp(1.1rem, 2vw, 1.25rem); 
     color: var(--grey-light);
     line-height: 1.6; /* Espaciado generoso para lectura rápida */
-    margin-top: 0.8rem; /* Juega con este valor para alejarlo de "Familiar Ardusso" */
-    margin-bottom: 2.5rem; /* Esto lo aleja del BOTÓN Apple */    max-width: 40rem;
+    margin-top: 0.8rem; 
+    margin-bottom: 2.5rem; 
+      max-width: 40rem;
 }
 
 /* =========================================
-   FLECHAS DEL CARRUSEL (ESTILO APPLE)
+   FLECHAS DEL CARRUSEL 
    ========================================= */
 .carousel__btn {
     position: absolute;
@@ -349,7 +347,7 @@ body::after {
 
 /* Efecto al pasar el mouse (Hover) */
 .carousel__btn:hover {
-    background: var(--rust-accent); /* Tu naranja rústico */
+    background: var(--rust-accent); 
     border-color: var(--rust-accent);
     transform: translateY(-50%) scale(1.1); /* Se agranda un poquito */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
@@ -365,17 +363,17 @@ body::after {
 }
 
 /* =========================================
-   INDICADORES (DOTS) ESTILO APPLE
+   INDICADORES (DOTS o PUNTITOS) 
    ========================================= */
 
 .carousel__dots {
     position: absolute;
-    bottom: 2.5rem; /* Subimos un poquito para que respiren */
+    bottom: 2.5rem; 
     left: 50%;
     transform: translateX(-50%);
     z-index: 30;
     display: flex;
-    gap: 12px; /* Espaciado elegante */
+    gap: 12px; /
     align-items: center;
 }
 
@@ -384,9 +382,7 @@ body::after {
     height: 8px;
     border-radius: 50%;
     border: none;
-    
-    /* Look Apple: Blanco con mucha transparencia */
-    background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
     
     cursor: pointer;
     padding: 0;
@@ -395,8 +391,8 @@ body::after {
 
 /* El punto activo: aumenta opacidad y se estira un poco */
 .carousel__dot.active {
-    background-color: rgba(255, 255, 255, 0.9); /* Casi blanco sólido pero fino */
-    width: 24px; /* Efecto cápsula minimalista */
+    background-color: rgba(255, 255, 255, 0.9); 
+    width: 24px; 
     border-radius: 10px;
 }
 
@@ -405,32 +401,25 @@ body::after {
     background-color: rgba(255, 255, 255, 0.5);
 }
 /* --- BOTÓN (Basado en accesibilidad táctil) --- */
-/* --- Botón Estilo Apple Rústico --- */
 .btn--apple {
     display: inline-block;
     padding: 1rem 2.8rem;
     background-color: var(--rust-accent);
     color: #ffffff;
-    text-decoration: none; /* Quita el subrayado */
+    text-decoration: none; 
     font-family: var(--font-clean);
     font-weight: 600;
     font-size: 1rem;
-    
-    /* El "Apple Look": bordes muy redondeados */
-    border-radius: 980px; 
-    
-    /* Sombra estilo Apple: Suave, difuminada y elegante */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), 
-                0 0 0 1px rgba(255, 255, 255, 0.1) inset;
-    
+   border-radius: 980px; 
+     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3),     
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     border: none;
     cursor: pointer;
 }
 
 .btn--apple:hover {
-    background-color: #b85a2e; /* Un naranja un poco más claro al pasar el mouse */
-    transform: scale(1.05); /* Efecto de expansión suave de Apple */
+    background-color: #b85a2e; 
+    transform: scale(1.05); /* Efecto de expansión */
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
     text-decoration: none;
 }
@@ -439,7 +428,7 @@ body::after {
     transform: scale(0.98); /* Se hunde un poquito al clickear */
 }
 
-/* Ocultar en móviles para evitar que estorben el texto (Opcional) */
+/* Ocultar en móviles para evitar que estorben el texto  */
 @media (max-width: 48rem) {
     .carousel__btn {
         width: 2.8rem;
@@ -466,23 +455,23 @@ body::after {
 
 @media (min-width: 768px) {
     .hero__info {
-        padding-left: 10%; /* Más aire a la izquierda en monitores */
+        padding-left: 10%; 
     }
 
     .title--small {
-        /* Subtítulo más pequeño que el principal para crear jerarquía */
+        /* Subtítulo más pequeño que el principal para Jerarquización Tipográfica.*/
         font-size: clamp(1.5rem, 3vw, 2.5rem); 
         letter-spacing: 0.2rem;
     }
 
     .btn--primary:hover {
         background-color: transparent;
-        transform: translateY(-5px); /* Feedback visual premium */
+        transform: translateY(-5px); 
         box-shadow: 0 10px 20px rgba(0,0,0,0.3);
     }
 }
 /* =========================================
-   SECTION HEADER (shared)
+   SECTION HEADER
    ========================================= */
 .section-header {
     max-width: var(--max-width);
@@ -507,24 +496,18 @@ body::after {
    PROYECTOS (Carousel horizontal)
    ========================================= */
 
-/* 1. Contenedor principal de la sección */
 
-/* El título grande (SELECCIÓN DE TRABAJOS) */
-
-/* --- SECCIÓN PROYECTOS EN MODO OSCURO --- */
-
-/* --- SECCIÓN PROYECTOS EN MODO OSCURO --- */
 #proyectos {
-    background-color: #000000 !important; /* Cambié el color a Iron Black puro como pediste antes */
-    padding: 40px 0; /* Bajamos de 100px a 40px para que suba el bloque */
-    margin-top: -20px; /* Margen negativo opcional si quieres "pegarlo" más al hero */
+    background-color: #000000 !important; 
+    padding: 40px 0; 
+    margin-top: -20px; 
     transition: background-color 0.4s ease;
 }
 
 /* El contenedor de los títulos (01 Proyectos / Selección de trabajos) */
 .section-header {
-    padding-top: 0 !important; /* Quitamos los 60px que lo empujaban hacia abajo */
-    margin-bottom: 40px !important; /* Espacio prolijo antes de que empiecen las fotos */
+    padding-top: 0 !important; 
+    margin-bottom: 40px !important; 
     text-align: left;
     padding-left: 5%; 
     font-weight: 400;
@@ -534,12 +517,12 @@ body::after {
     font-family: var(--font-accent);
     font-size: 3.5rem !important;
     font-weight: 800;
-    color: #ffffff; /* Aseguramos que sea blanco para el modo oscuro */
+    color: #ffffff; 
     text-transform: uppercase;
-    line-height: 0.9; /* Más apretado estilo Apple */
+    line-height: 0.9; 
     letter-spacing: -2px;
     margin: 0;
-    margin-top: 0.2rem; /* Espacio mínimo con el '01 — Proyectos' */
+    margin-top: 0.2rem; 
 }
 
 /* Contenedor principal para centrar la sección */
@@ -553,7 +536,6 @@ body::after {
     justify-content: center;
 }
 
-/* Este es el que corta lo que sobra */
 .projects-container {
     overflow: hidden; 
     width: 100%;
@@ -565,37 +547,36 @@ body::after {
 
 .project-card {
     position: relative;
-    border-radius: 20px; /* Redondea toda la tarjeta */
-    overflow: hidden; /* Importante para que la imagen se corte en las esquinas superiores */
+    border-radius: 20px; 
+    overflow: hidden; 
     min-width: 350px !important;
-    height: 720px !important; /* Aumentamos un poco el alto total */
-    background-color: #f2f2ff; /* Un gris profundo, menos agresivo que el negro */    display: flex !important; /* Activamos el modo pila */
-    flex-direction: column !important; /* Imagen arriba, texto abajo */
+    height: 720px !important; 
+    background-color: #f2f2ff;    
+   display: flex !important; 
+    flex-direction: column !important; 
     
     box-shadow: 0 4px 20px rgba(13, 13, 13, 0.05);
     transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
-                box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* El contenedor de la imagen ocupa el 70% de la tarjeta */
 .project-card__img-wrap {
-    position: relative !important; /* Ya no flota sobre el texto */
+    position: relative !important; 
     width: 100% !important;
     height: 520px !important; /* Altura fija para la imagen */
     background-size: cover !important;
     background-position: center !important;
-    flex-shrink: 0; /* Que no se achique */
+    flex-shrink: 0; 
 }
 
-/* El bloque de información ocupa el resto (abajo, sobre fondo blanco limpio) */
 
 .project-card__info {
 
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Alinea todo el contenido a la izquierda */
+    align-items: flex-start; /* Alinear todo el contenido a la izquierda, mayor legibilidad */
     padding: 20px 25px;
-    background-color: #f2f2ff; /* El gris que querías para las cards */
+    background-color: #f2f2ff; 
     border-radius: 0 0 20px 20px;
 }   
 
@@ -619,7 +600,7 @@ body::after {
     position: relative;
     width: 100%;
     height: 100%;
-    border-radius: 4px; /* Un toque suave */
+    border-radius: 4px;
     overflow: hidden;
 }
 
@@ -628,18 +609,18 @@ body::after {
    display: flex !important;
     gap: 25px !important;
     width: max-content !important;
-    transform: translateX(0); /* Siempre empezamos en cero */
+    transform: translateX(0); 
     transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* El contenedor de texto flotante */
+/* El contenedor de texto  */
 .project-card__overlay {
     position: absolute;
     bottom: 20px;
     left: 20px;
     right: 20px;
-    background: rgba(255, 255, 255, 0.9); /* Blanco semi-transparente */
-    backdrop-filter: blur(10px); /* Efecto de vidrio esmerilado */
+    background: rgba(255, 255, 255, 0.9); 
+    backdrop-filter: blur(10px); 
     padding: 25px;
     border-radius: 2px;
     transform: translateY(0);
@@ -647,11 +628,11 @@ body::after {
 }
 
 
-/* Título estilo Suizo */
+/* Título estilo  */
 .project-card__title {
-    font-family: var(--font-accent); /* <--- Faltaba el punto y coma aquí */
+    font-family: var(--font-accent);
     font-size: 1.4rem;
-    font-weight: 800;               /* <--- Corregido: el máximo es 900 (1540 no existe) */
+    font-weight: 800;             
     color: #242121;
     margin-top: 1rem;
     text-transform: uppercase;
@@ -659,7 +640,7 @@ body::after {
 }
 
 
-/* Botón minimalista */
+/* Botón  */
 .btn-card-minimal {
     display: inline-flex;
     align-items: center;
@@ -706,32 +687,26 @@ body::after {
 
 
 .btn-ver-mas {
-    /* Mantenemos tu color óxido */
     background-color: var(--rust-accent);
     color: #ffffff !important;
     text-decoration: none;
     font-size: 0.85rem;
     font-weight: 600;
-    
-    /* Mantenemos el look cápsula redondo */
     border-radius: 980px; 
-    
-    padding: 10px 20px !important; /* Más angosto verticalmente */
-    display: inline-block !important; /* Clave: el ancho depende del texto */
-    
-    /* CAMBIO 3: CENTRAR EL BOTÓN DENTRO DE LA CAJA */
-    align-self: left
-    ; /* Funciona porque el contenedor padre (.project-card__info) es flex */
+    padding: 10px 20px !important;
+    display: inline-block !important;
+   align-self: left
+    ; 
     
     transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
     cursor: pointer;
     border: none;
 }
 
-/* Efecto Hover sutil (opcional) */
+/* Efecto Hover */
 .btn-ver-mas:hover {
-    filter: brightness(1.1); /* Brilla un poquito al pasar el mouse */
-    transform: scale(1.02); /* Un crecimiento casi imperceptible */
+    filter: brightness(1.1);
+    transform: scale(1.02); 
 }
 
 
@@ -744,7 +719,7 @@ body::after {
     font-weight:500;
     line-height: 1.4;
     }
-/* El wrap de la imagen DEBE tener altura para que el background-image funcione */
+
 .project-card__img-wrap {
     width: 100%;
     height: 250px;
@@ -759,7 +734,7 @@ body::after {
    ========================================= */
 
    #clientes {
-    background-color: #000000 !important; /* Fuerza el fondo a Iron Black */
+    background-color: #000000 !important; 
     padding: 100px 0;
     transition: background-color 0.4s ease;
 }
@@ -781,16 +756,15 @@ body::after {
     display: flex;
     gap: 20px;
     width: max-content;
-    /* Animación automática opcional si no querés usar JS */
     animation: scrollClients 30s linear infinite;
 }
 
 .client-card {
-    min-width: 280px; /* Más larga */
-    height: 100px;    /* Poco ancha (baja) */
+    min-width: 280px; 
+    height: 100px;    
     background:var(--iron-black);
     border: 1px solid #eee;
-    border-radius: 50px; /* Corners totalmente redondeados estilo Apple */
+    border-radius: 50px; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -828,22 +802,21 @@ body::after {
    EQUIPO
    ========================================= */
   #equipo {
-    background-color: #000000 !important; /* Fuerza el fondo a Iron Black */
+    background-color: #000000 !important; 
     padding: 100px 0;
     transition: background-color 0.4s ease;
     }
 
 
-/* Estilo específico para el título de la sección de Equipo */
+/* Titulo Seccion Equipo */
 #equipo .section-title {
  color: #ffffff !important;
-    font-size: 5rem !important; /* Prueba con 5rem primero, 40rem es gigante */
+    font-size: 5rem !important;
     text-transform: uppercase !important;
     line-height: 0.9 !important;
     display: block !important;
 }
 
-/* También ajustamos el número (04 — Nuestro Equipo) para que combine */
 #equipo .section-label {
     color: var(--rust-accent);
     font-size: 0.9rem;
@@ -856,13 +829,13 @@ body::after {
     justify-content: center;
     gap: 40px;
     padding: 0 5%;
-    flex-wrap: wrap; /* Para que en móviles se pongan una debajo de otra */
+    flex-wrap: wrap; 
 }
 
-/* La Card de Equipo: Más grande y robusta */
+/* La Card de Equipo*/
 .team-card {
     width: 450px;
-    height: 700px; /* Un poco más de aire para la descripción */
+    height: 700px; 
     background-color: #ffffff;
     border-radius: 12px;
     overflow: hidden;
@@ -876,22 +849,19 @@ body::after {
     transform: translateY(-10px);
 }
 
-/* Contenedor de la Imagen (Ocupa la parte superior) */
+/* Contenedor de la Imagen*/
 .team-card__img-wrap {
     width: 100%;
-    height: 65%; /* Ocupa más espacio para el retrato */
+    height: 65%; 
     background-size: cover;
-    
-    /* ESTO CORRIGE LAS CARAS: */
     background-position: center 10%; 
-    
     background-repeat: no-repeat;
     background-color: #ffffff;
     flex-shrink: 0;
 }
 
 
-/* Contenedor de Texto (Ocupa la parte inferior) */
+/* Contenedor de Texto*/
 .team-card__info {
     flex-grow: 1;
     padding: 30px;
@@ -901,7 +871,7 @@ body::after {
     justify-content: flex-start;
 }
 
-/* Estilos de los textos del equipo */
+/* Estilos Textos del equipo */
 .team-card__name {
     font-family: var(--font-accent);
     font-size: 1.5rem;
@@ -913,7 +883,7 @@ body::after {
 
 .team-card__role {
     font-family: 'Inter', sans-serif;
-    color: #b85a2e; /* Tu color rust/óxido */
+    color: #b85a2e; 
     font-weight: 700;
     font-size: 0.9rem;
     text-transform: uppercase;
@@ -929,7 +899,7 @@ body::after {
     margin: 0;
 }
 
-/* Animación de elevación Apple */
+/* Animación */
 .team-card:hover {
     transform: translateY(-12px);
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
@@ -947,13 +917,13 @@ body::after {
    ========================================= */
 
  #historia {
-    background-color: #000000 !important; /* Fuerza el fondo a Iron Black */
+    background-color: #000000 !important; 
     padding: 100px 0;
     transition: background-color 0.4s ease;
     }
 
 .about {
-    padding: 100px 0; /* Espacio vertical generoso */
+    padding: 100px 0; 
     background-color: var(--brick-background);
 }
 
@@ -961,7 +931,7 @@ body::after {
 /* Unificación de estilos de encabezado */
 .about__heading {
     font-family: var(--font-accent); /* Syne */
-    font-size: 3rem;                /* O el tamaño que uses en Proyectos */
+    font-size: 3rem;               
     text-transform: uppercase;
     color: var(--iron-black);
     margin-top: 1rem;
@@ -970,15 +940,15 @@ body::after {
 
 .about__layout {
     display: grid;
-    grid-template-columns: 1fr 1.2fr; /* Imagen izquierda, texto derecha */
+    grid-template-columns: 1fr 1.2fr; 
     gap: 80px;
-    max-width: var(--max-width); /* ESTO CENTRA EL CONTENIDO */
+    max-width: var(--max-width); 
     margin: 0 auto;
-    padding: 0 5%; /* Margen de seguridad para que no toque los bordes */
+    padding: 0 5%; 
     align-items: start;
 }
 
-/* Columna de Imagen Sticky */
+/* Columna de Imagen*/
 .about__image-col {
     position: sticky;
     top: 120px;
@@ -1016,15 +986,14 @@ body::after {
     font-family: var(--font-accent); /* Syne */
     font-size: 1.2rem;
     text-transform: uppercase;
-    color: var(--rust-accent); /* COLOR ÓXIDO PARA JERARQUÍA */
-    margin-bottom: 25px; /* Espacio punto y aparte */
+    color: var(--rust-accent); 
+    margin-bottom: 25px; 
     letter-spacing: 2px;
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
-/* Línea sutil suiza antes del título */
 .about-card__title::before {
     content: "";
     width: 30px;
@@ -1041,23 +1010,22 @@ body::after {
     text-wrap: pretty;
 }
 
-/* Esto hace que el título de Historia sea igual al de Equipo y Proyectos */
 .section-header {
     max-width: var(--max-width);
-    margin: 0 auto 60px auto; /* Espacio suizo entre título y contenido */
+    margin: 0 auto 60px auto; 
     padding: 0 5%;
 }
 
 .section-title {
     font-family: var(--font-accent); /* Syne */
-    font-size: clamp(2rem, 4vw, 2rem); /* Tamaño Apple: grande y negrita */
+    font-size: clamp(2rem, 4vw, 2rem); 
     text-transform: uppercase;
     line-height: 1;
     color: #ffffff;
     margin: 0;
 }
 
-/* Ajuste del layout para que respete el margen del título */
+/* Ajuste del layout */
 .about__layout {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
@@ -1071,12 +1039,12 @@ body::after {
 .about__content-col {
     display: flex;
     flex-direction: column;
-    gap: 60px; /* Esto da aire entre Origen, Misión y Visión */
-    padding-bottom: 50px; /* Espacio al final para que no corte abrupto */
+    gap: 60px; 
+    padding-bottom: 50px; 
 }
 
 .about-card {
-    display: block !important; /* Asegura que sean visibles */
+    display: block !important; 
     opacity: 1 !important;
 }
 
@@ -1101,14 +1069,14 @@ body::after {
 
 
 .apple-footer {
-    background-color: #161617; /* El negro de Apple */
+    background-color: #161617; 
     color: #86868b;
     padding: 60px 0 30px;
     border-top: 1px solid #424245;
 }
 
 .footer-container {
-    max-width: 980px; /* Ancho contenido Apple */
+    max-width: 980px; /
     margin: 0 auto;
     padding: 0 22px;
 }
@@ -1123,7 +1091,7 @@ body::after {
 
 /* --- COLUMNA 1: BRANDING --- */
 .footer-logo-main {
-    font-family: var(--font-industrial); /* Tu fuente Agdasima */
+    font-family: var(--font-industrial); 
     font-size: 1.8rem;
     font-weight: 900;
     text-transform: uppercase;
@@ -1137,7 +1105,7 @@ body::after {
     font-family: var(--font-clean, sans-serif);
     font-size: 0.7rem;
     letter-spacing: 0.3rem;
-    color: var(--rust-accent); /* Tu color óxido */
+    color: var(--rust-accent); 
     margin-top: 0.4rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -1208,7 +1176,6 @@ body::after {
         cursor: pointer;
     }
 
-    /* En móvil Apple suele ocultar las listas o apilarlas */
     .directory-list {
         padding-top: 10px;
     }
