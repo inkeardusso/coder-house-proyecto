@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Detalle | Herrería Ardusso</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&family=Krub:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-interface">
+    <div class="header-industrial">
+        <div class="header__container">
+            <div class="header__branding">
+                <h1 class="logo-main">HERRERÍA ARDUSSO</h1>
+                <p class="logo-tagline">DESDE 1997</p>
+            </div>
+            
+            <div class="header__info-right">
+                <div class="info-item">
+                    <span class="info-label">Dirección:</span>
+                    <span class="info-text">RUTA 21 KM 178</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Teléfono:</span>
+                    <a href="tel:099520393" class="info-text">099 520 393</a>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Gmail:</span>
+                    <a href="mailto:herraria.ardusso@gmail.com" class="info-text">herraria.ardusso@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div class="nav-container">
+        <a href="index.html#proyectos" class="btn-back-apple">
+            <svg viewBox="0 0 24 24">
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+            </svg>
+            Volver a Proyectos
+        </a>
+    </div>
+
+    <main class="main-content">
+        <section class="gallery-container">
+            <div class="main-image">
+                <img src="img/proyecto1.jpg" id="mainImg" alt="Estructura Industrial Principal">
+           
+             <!-- Botones de navegación posicionados sobre la imagen -->
+            <button class="nav-arrow arrow-prev" onclick="changeSlide(-1)">
+                <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+            </button>
+            
+            <button class="nav-arrow arrow-next" onclick="changeSlide(1)">
+                <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+            </button>
+            
+            </div>
+            
+            <div class="thumbnails">
+                <div class="thumb active" onclick="updateGallery(this)">
+                    <img src="img/proyecto1/anton-maksimov-5642-su-mGepDYLPUxI-unsplash.jpg" alt="Vista 1">
+                </div>
+                <div class="thumb" onclick="updateGallery(this)">
+                    <img src="img/proyecto1/artis-kancs-6WvtqFSNMnY-unsplash.jpg" alt="Vista 2">
+                </div>
+                <div class="thumb" onclick="updateGallery(this)">
+                    <img src="img/proyecto1/danylo-harmatiy-tOQE8DOHNmQ-unsplash.jpg" alt="Vista 3">
+                </div>
+                <div class="thumb" onclick="updateGallery(this)">
+                    <img src="img/proyecto1/declan-sun-MigVy7a7SvE-unsplash.jpg" alt="Vista 4">
+                </div>
+                <div class="thumb" onclick="updateGallery(this)">
+                    <img src="img/proyecto1/domingo-alvarez-e-hLreVEqDSCs-unsplash.jpg" alt="Vista 5">
+                </div>
+            </div>
+        </section>
+
+        <aside class="project-info">
+            <span class="badge">Trabajo Destacado</span>
+            <h1 class="project-title">Estructura Industrial</h1>
+            <p class="project-description">
+                Fabricación de estructuras de alta resistencia para depósitos industriales en Colonia, optimizando la durabilidad con materiales de primera calidad.
+            </p>
+            
+            <ul class="specs-list">
+                <li class="specs-item">
+                    <span class="specs-label">Materiales</span>
+                    <span class="specs-value">Hierro y Acero</span>
+                </li>
+                <li class="specs-item">
+                    <span class="specs-label">Acabado</span>
+                    <span class="specs-value">Protección Anticorrosiva</span>
+                </li>
+                <li class="specs-item">
+                    <span class="specs-label">Ubicación</span>
+                    <span class="specs-value">Colonia del Sacramento</span>
+                </li>
+            </ul>
+
+            <a href="https://wa.me/59899520393" class="cta-button" target="_blank">Consultar Presupuesto</a>
+        </aside>
+    </main>
+
+
+<!-- 2.  FOOTER -->
+<footer class="apple-footer" id="contacto">
+    <div class="footer-container">
+        <div class="footer-grid">
+            
+            <!-- Columna 1: Branding -->
+            <div class="footer-brand">
+                <h2 class="footer-logo-main">HERRERÍA ARDUSSO</h2>
+                <p class="footer-logo-tagline">FORJA Y DISEÑO PROFESIONAL</p>
+            </div>
+
+            <!-- Columna 2: Navegación -->
+            <div class="directory-column">
+                <h3 class="directory-title">Navegación</h3>
+                <ul class="directory-list">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#clientes">Clientes</a></li> <!-- Añadido para consistencia -->
+                    <li><a href="#equipo">Equipo</a></li>
+                    <li><a href="#historia">Historia</a></li>
+                </ul>
+            </div>
+
+             <!-- Columna 3: Contacto -->
+            <div class="directory-column">
+                <h3 class="directory-title">Contacto</h3>
+                <ul class="directory-list">
+                    <li><a href="[https://mail.google.com/mail/?view=cm&fs=1&to=herreria.ardusso@gmail.com](https://mail.google.com/mail/?view=cm&fs=1&to=herreria.ardusso@gmail.com)" target="_blank" style=" font-weight: bold;">Email</a></li>                  
+                    <li><a href="https://instagram.com/francoardusso/" target="_blank">Instagram</a></li>
+                    <li><a href="https://facebook.com/franco.ardusso" target="_blank">Facebook</a></li>
+                    <li><a href="https://www.google.com/maps/place/HERRERIA+ARDUSSO/@-34.4489804,-57.8414139,17z/data=!3m1!4b1!4m6!3m5!1s0x95a31352e96b87c3:0xbb3be165ed3dbb83!8m2!3d-34.4489804!4d-57.838839!16s%2Fg%2F11svt7kvqd?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank">Google Maps</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <section class="footer-bottom">
+            <div class="footer-legal">
+                <span class="legal-copyright">© 2026 Herrería Ardusso. Todos los derechos reservados.</span>
+                <div class="legal-country">Uruguay</div>
+            </div>
+        </section>
+    </div>
+</footer>
+    
+</body>
+</html>
+
+<script>
+    /**
+     * Actualiza la imagen principal de la galería al hacer clic en una miniatura.
+     * @param {HTMLElement} thumbnailElement - El contenedor de la miniatura clickeada.
+     */
+    function updateGallery(thumbnailElement) {
+        // Obtenemos la ruta de la imagen miniatura directamente
+        const newSrc = thumbnailElement.querySelector('img').src;
+        const mainImg = document.getElementById('mainImg');
+        
+        // Efecto visual de transición (opacidad)
+        mainImg.style.opacity = '0.3';
+        
+        setTimeout(() => {
+            // Cambio de fuente de imagen
+            mainImg.src = newSrc;
+            mainImg.style.opacity = '1';
+            
+            // Actualización de estado visual en las miniaturas
+            document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+            thumbnailElement.classList.add('active');
+        }, 120);
+    }
+</script>
+
+<style>
+    /* Variables de Diseño */
+    :root {
+        --apple-gray: #f5f5f7;
+        --apple-dark: #1d1d1f;
+        --apple-text-gray: #86868b;
+        --rust-accent: #b85c38;
+        --iron-black: #0a0a0b;
+        --off-white: #f5f5f7;
+        --max-width: 1200px;
+    }
+
+    /* Reseteo y Base */
+    body {
+        font-family: 'Inter', -apple-system, sans-serif;
+        background-color: #fff;
+        color: var(--apple-dark);
+        margin: 0;
+        padding: 0;
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+    }
+
+   /* Header Superior - Fondo Negro Industrial */
+.header-industrial {
+    background-color: var(--iron-black);
+    padding: 1.5rem 5%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.header__container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-main {
+    font-family: var(--font-industrial);
+    font-size: 1.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--off-white);
+    letter-spacing: 0.1rem;
+    line-height: 1;
+}
+
+.logo-tagline {
+    font-family: var(--font-clean);
+    font-size: 0.7rem;
+    letter-spacing: 0.3rem;
+    color: var(--rust-accent);
+    margin-top: 0.3rem;
+    font-weight: 700;
+}
+
+/* Bloque de contacto derecho */
+.header__info-right {
+    text-align: left;
+    font-family: var(--font-clean);
+    font-size: 0.75rem;
+}
+
+.info-label {
+    color: var(--grey-mid);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-right: 0.4rem;
+}
+
+.info-text {
+    color: var(--off-white);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.info-text:hover { color: var(--rust-accent); }
+
+    /* Navegación y Botón Volver (Apple Rústico) */
+    .nav-container {
+        width: 90%;
+        max-width: 1100px;
+        margin: 1.5rem auto 1rem;
+    }
+    .btn-back-apple {
+        display: inline-flex; 
+        align-items: center;
+        background: linear-gradient(180deg, #d16d45 0%, #b85c38 100%);
+        color: white !important;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 500;
+        padding: 8px 18px;
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba(184, 92, 56, 0.2);
+    }
+    .btn-back-apple svg {
+        width: 16px; height: 16px; margin-right: 6px; fill: currentColor;
+    }
+
+    /* Layout Principal (Mobile First) */
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        width: 90%;
+        max-width: 1100px;
+        margin: 0 auto 50px;
+    }
+
+    /* Galería */
+/* --- CONTENEDOR DE LA IMAGEN --- */
+    .main-image {
+        position: relative !important; /* Fuerza a que sea el marco de referencia */
+        width: 100%;
+        height: 550px;
+        background-color: #f5f5f7;
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1; /* Nivel base */
+    }
+
+    .main-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* --- BOTONES DE NAVEGACIÓN (APPLE STYLE) --- */
+    .nav-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%); /* Centrado vertical exacto */
+        width: 46px;
+        height: 46px;
+        background: rgba(255, 255, 255, 0.6) !important;
+        backdrop-filter: blur(15px) saturate(180%);
+        -webkit-backdrop-filter: blur(15px) saturate(180%);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0; /* Ocultas por defecto */
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 999; /* Muy por encima de la imagen */
+        padding: 0;
+        margin: 0;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }
+
+    /* Para que aparezcan cuando pasas el mouse sobre .main-image */
+    .main-image:hover .nav-arrow {
+        opacity: 1;
+    }
+
+    .nav-arrow:hover {
+        background: rgba(255, 255, 255, 0.9) !important;
+        transform: translateY(-50%) scale(1.1);
+    }
+
+    /* Ajuste de los íconos */
+    .nav-arrow svg {
+        width: 24px;
+        height: 24px;
+        fill: #1d1d1f;
+        pointer-events: none; /* Evita que el click se pierda en el ícono */
+    }
+
+    /* Posicionamiento lateral */
+    .arrow-prev {
+        left: 20px !important;
+    }
+
+    .arrow-next {
+        right: 20px !important;
+    }
+
+    /* Miniaturas */
+    .thumbnails { 
+        display: grid; 
+        grid-template-columns: repeat(5, 1fr); 
+        gap: 8px; 
+        margin-top: 15px;
+    }
+
+    .thumb { 
+        aspect-ratio: 1; 
+        background-color: #f5f5f7; 
+        border-radius: 8px; 
+        overflow: hidden; 
+        border: 2px solid transparent; 
+        cursor: pointer; 
+    }
+
+.thumb.active { border-color: #A64B2A; } /* Tu color Rust Accent */
+
+.thumb img { width: 100%; height: 100%; object-fit: cover; }
+    .main-image img { width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease; }
+    
+    .thumbnails { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+    .thumb { aspect-ratio: 1; background-color: var(--apple-gray); border-radius: 8px; overflow: hidden; border: 2px solid transparent; cursor: pointer; }
+    .thumb.active { border-color: var(--rust-accent); }
+    .thumb img { width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+
+    /* Información de Proyecto */
+    .badge { font-size: 10px; font-weight: 700; color: var(--rust-accent); text-transform: uppercase; letter-spacing: 1px; }
+    .project-title { font-size: 28px; font-weight: 600; margin: 8px 0; letter-spacing: -0.5px; }
+    .project-description { color: var(--apple-text-gray); font-size: 14px; margin-bottom: 20px; }
+    
+    .specs-list { list-style: none; padding: 0; border-top: 1px solid var(--apple-gray); margin-top: 20px; }
+    .specs-item { padding: 15px 0; border-bottom: 1px solid var(--apple-gray); display: flex; justify-content: space-between; font-size: 13px; }
+    .specs-label { color: var(--apple-text-gray); }
+    .specs-value { font-weight: 600; }
+
+    .cta-button {
+        display: block;
+        background-color: var(--apple-dark);
+        color: white;
+        text-align: center;
+        padding: 16px;
+        border-radius: 12px;
+        text-decoration: none;
+        font-weight: 600;
+        margin-top: 25px;
+        font-size: 15px;
+    }
+    
+.apple-footer {
+    background-color: #161617; /* El negro de Apple */
+    color: #86868b;
+    padding: 60px 0 30px;
+    border-top: 1px solid #424245;
+}
+
+.footer-container {
+    max-width: 980px; /* Ancho contenido Apple */
+    margin: 0 auto;
+    padding: 0 22px;
+}
+
+/* Grilla de 3 columnas */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* --- COLUMNA 1: BRANDING --- */
+.footer-logo-main {
+    font-family: var(--font-industrial); /* Tu fuente Agdasima */
+    font-size: 1.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #f5f5f7;
+    letter-spacing: 0.1rem;
+    line-height: 1;
+    margin: 0;
+}
+
+.footer-logo-tagline {
+    font-family: var(--font-clean, sans-serif);
+    font-size: 0.7rem;
+    letter-spacing: 0.3rem;
+    color: var(--rust-accent); /* Tu color óxido */
+    margin-top: 0.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* --- COLUMNAS 2 Y 3: LISTAS --- */
+.directory-title {
+    color: #f5f5f7;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.directory-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.directory-list li {
+    margin-bottom: 10px;
+}
+
+.directory-list a {
+    color: #86868b;
+    text-decoration: none;
+    font-size: 12px;
+    transition: color 0.2s ease;
+}
+
+.directory-list a:hover {
+    color: #f5f5f7; /* Brillo al pasar el mouse */
+}
+
+/* --- SECCIÓN INFERIOR --- */
+.footer-bottom {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #424245;
+}
+
+.footer-legal {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #6e6e73;
+}
+
+    /* Adaptación Tablet y Desktop */
+    @media (min-width: 768px) {
+        .logo-main { font-size: 1.8rem; }
+        .main-image { height: 450px; }
+        .project-title { font-size: 32px; }
+    }
+
+    @media (min-width: 1024px) {
+        .main-content {
+            display: grid;
+            grid-template-columns: 1.6fr 1fr;
+            gap: 50px;
+        }
+        .main-image { height: 550px; border-radius: 16px; }
+        .project-info { position: sticky; top: 40px; }
+        .btn-back-apple:hover { background: #a34e2e; transform: translateY(-1px); }
+        .cta-button:hover { background-color: #000; transform: scale(1.02); }
+    }
+</style>

@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herrería Ardusso | Forja y Diseño Profesional</title>
+    <meta name="description" content="Herrería artesanal y de obra. Diseños a medida en hierro, portones, rejas y muebles industriales. Calidad y durabilidad garantizada.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@400;700&family=Krub:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Krub:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+
+    <header class="main-interface">
+    <div class="header-industrial">
+        <div class="header__container">
+            <div class="header__branding">
+                <h1 class="logo-main">HERRERÍA ARDUSSO</h1>
+                <p class="logo-tagline">DESDE 1997</p>
+            </div>
+            
+            <div class="header__info-right">
+                <div class="info-item">
+                    <span class="info-label">Dirección:</span>
+                    <span class="info-text">RUTA 21 KM 178</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Teléfono:</span>
+                    <a href="tel:099520393" class="info-text">099 520 393</a>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Gmail:</span>
+                    <a href="mailto:herraria.ardusso@gmail.com" class="info-text">herraria.ardusso@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+<!-- SECCIÓN NAVEGADOR -->
+
+
+<nav class="nav-apple">
+    <div class="nav__container">
+        <ul class="nav__list">
+            <!-- Orden solicitado: 1. Inicio, 2. Proyectos, 3. Clientes, 4. Equipo, 5. Historia, 6. Contacto -->
+            <li><a href="#inicio" class="nav__btn">Inicio</a></li>
+            <li><a href="#proyectos" class="nav__btn">Proyectos</a></li>
+            <li><a href="#clientes" class="nav__btn">Clientes</a></li>
+            <li><a href="#equipo" class="nav__btn">Equipo</a></li>
+            <li><a href="#historia" class="nav__btn">Historia</a></li>
+            <!-- Este enlace ahora sí encontrará el id="contacto" que pondremos en el footer -->
+            <li><a href="#contacto" class="nav__btn">Contacto</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- SECCIÓN HERO -->
+
+
+<section id="inicio" class="hero">
+    <div class="carousel" id="heroCarousel">
+        <div class="carousel__track">
+            
+            <div class="carousel__slide active" style="background-image: url('img/hero1.jpg');">
+                <div class="hero__info">
+                    <h3 class="hero__title">
+                        <span class="title--large">Maestros</span> 
+                        <span class="title--small">del Hierro y el Fuego</span>
+                    </h3>
+                    <p class="hero__text">Soluciones de herrería artesanal para proyectos únicos.</p>
+                    <a href="#proyectos" class="btn btn--apple">Ver Proyectos</a>
+                </div>
+            </div>
+
+            <div class="carousel__slide" style="background-image: url('img/hero2.jpg');">
+                <div class="hero__info">
+                    <h3 class="hero__title">
+                        <span class="title--large">Forja</span>
+                        <span class="title--small">Industrial y Diseño</span>
+                    </h3>
+                    <p class="hero__text">Estructuras sólidas con acabados de precisión técnica.</p>
+                    <a href="#proyectos" class="btn btn--apple">Ver Proyectos</a>
+                </div>
+            </div>
+
+            <div class="carousel__slide" style="background-image: url('img/hero3.jpg');">
+                <div class="hero__info">
+                    <h3 class="hero__title">
+                        <span class="title--large">Calidad</span>
+                        <span class="title--small">Certificada</span>
+                    </h3>
+                    <p class="hero__text">Materiales de primera para resultados que perduran.</p>
+                    <a href="#footer" class="btn btn--apple">Presupuestar</a>
+                </div>
+            </div>
+
+            <div class="carousel__slide" style="background-image: url('img/hero4.jpg');">
+                <div class="hero__info">
+                    <h3 class="hero__title">
+                        <span class="title--large">Tradición</span>
+                        <span class="title--small">Familiar Ardusso</span>
+                    </h3>
+                    <p class="hero__text">Desde 1997 construyendo confianza en Colonia.</p>
+                    <a href="#historia" class="btn btn--apple">Nuestra Historia</a>
+                </div>
+            </div>
+
+            <div class="carousel__slide" style="background-image: url('img/hero5.jpg');">
+                <div class="hero__info">
+                    <h3 class="hero__title">
+                        <span class="title--large">Diseño</span>
+                        <span class="title--small">Arquitectónico</span>
+                    </h3>
+                    <p class="hero__text">Fusionamos la fuerza del metal con la estética moderna.</p>
+                    <a href="#proyectos" class="btn btn--apple">Ver Proyectos</a>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="carousel__btn carousel__btn--prev proj-btn" onclick="moveProjects(-1)">&#8249;</button>
+        <button class="carousel__btn carousel__btn--next proj-btn" onclick="moveProjects(1)">&#8250;</button>
+       
+<div class="carousel__dots" id="heroDots">
+            <button class="carousel__dot active" onclick="goToSlide('hero', 0)"></button>
+            <button class="carousel__dot" onclick="goToSlide('hero', 1)"></button>
+            <button class="carousel__dot" onclick="goToSlide('hero', 2)"></button>
+            <button class="carousel__dot" onclick="goToSlide('hero', 3)"></button>
+            <button class="carousel__dot" onclick="goToSlide('hero', 4)"></button>
+        </div>
+    </div>
+</section>
+    
+<!-- SECCIÓN PROYECTOS -->
+
+<!-- SECCIÓN PROYECTOS -->
+<section id="proyectos" class="portfolio">
+    <div class="section-header">
+        <span class="section-label">01 — Proyectos</span>
+        <h2 class="portfolio__heading">Selección de Trabajos</h2>
+    </div>
+
+    <div class="projects-viewport">
+        <button class="carousel__btn carousel__btn--prev proj-btn" onclick="moveProjects(-1)">&#8249;</button>
+        <button class="carousel__btn carousel__btn--next proj-btn" onclick="moveProjects(1)">&#8250;</button>
+
+        <div class="projects-container">
+            <div class="projects-track" id="projectsTrack">
+                
+                <!-- Proyecto 1 -->
+                <article class="project-card">
+                    <div class="project-card__img-wrap" style="background-image: url('img/proyecto1.jpg');"></div>
+                    <div class="project-card__info">
+                        <h3 class="project-card__title">Proyecto 1</h3>
+                        <p class="project-card__desc">Estructura para Edificio</p>
+                        <a href="proyecto1.html" class="btn-ver-mas">Ver proyecto</a>
+                    </div>
+                </article>
+
+                <!-- Proyecto 2 -->
+                <article class="project-card">
+                    <div class="project-card__img-wrap" style="background-image: url('img/proyecto2.jpg');"></div>
+                    <div class="project-card__info">
+                        <h3 class="project-card__title">Proyecto 2</h3>
+                        <p class="project-card__desc">Escalera Industrial</p>
+                        <a href="proyecto2.html" class="btn-ver-mas">Ver proyecto</a>
+                    </div>
+                </article>
+
+                <!-- Proyecto 3 -->
+                <article class="project-card">
+                    <div class="project-card__img-wrap" style="background-image: url('img/proyecto3.jpg');"></div>
+                    <div class="project-card__info">
+                        <h3 class="project-card__title">Proyecto 3</h3>
+                        <p class="project-card__desc">Ingeniería de Techos</p>
+                        <a href="proyecto3.html" class="btn-ver-mas">Ver proyecto</a>
+                    </div>
+                </article>
+
+                <!-- Proyecto 4 -->
+                <article class="project-card">
+                    <div class="project-card__img-wrap" style="background-image: url('img/proyecto4.jpg');"></div>
+                    <div class="project-card__info">
+                        <h3 class="project-card__title">Proyecto 4</h3>
+                        <p class="project-card__desc">Rejas Estilo Colonial</p>
+                        <a href="proyecto4.html" class="btn-ver-mas">Ver proyecto</a>
+                    </div>
+                </article>
+
+                <!-- Proyecto 5 -->
+                <article class="project-card">
+                    <div class="project-card__img-wrap" style="background-image: url('img/proyecto5.jpg');"></div>
+                    <div class="project-card__info">
+                        <h3 class="project-card__title">Proyecto 5</h3>
+                        <p class="project-card__desc">Estructura Centro Logístico</p>
+                        <a href="proyecto5.html" class="btn-ver-mas">Ver proyecto</a>
+                    </div>
+                </article>
+
+                <!-- Proyecto 6 -->
+                <article class="project-card">
+                    <div class="project-card__img-wrap" style="background-image: url('img/proyecto6.jpg');"></div>
+                    <div class="project-card__info">
+                        <h3 class="project-card__title">Proyecto 6</h3>
+                        <p class="project-card__desc">Puente Estructural</p>
+                        <a href="proyecto6.html" class="btn-ver-mas">Ver proyecto</a>
+                    </div>
+                </article>
+
+                <!-- Proyecto 7 -->
+                <article class="project-card">
+                    <div class="project-card__img-wrap" style="background-image: url('img/proyecto7.jpg');"></div>
+                    <div class="project-card__info">
+                        <h3 class="project-card__title">Proyecto 7</h3>
+                        <p class="project-card__desc">Luminaria de Hierro</p>
+                        <a href="proyecto7.html" class="btn-ver-mas">Ver proyecto</a>
+                    </div>
+                </article>
+
+                <!-- Proyecto 8 -->
+                <article class="project-card">
+                    <div class="project-card__img-wrap" style="background-image: url('img/proyecto8.jpg');"></div>
+                    <div class="project-card__info">
+                        <h3 class="project-card__title">Proyecto 8</h3>
+                        <p class="project-card__desc">Portones Estilo Colonial</p>
+                        <a href="proyecto8.html" class="btn-ver-mas">Ver proyecto</a>
+                    </div>
+                </article>
+
+                <!-- Proyecto 9 -->
+                <article class="project-card">
+                    <div class="project-card__img-wrap" style="background-image: url('img/proyecto9.jpg');"></div>
+                    <div class="project-card__info">
+                        <h3 class="project-card__title">Proyecto 9</h3>
+                        <p class="project-card__desc">Parillas de Hierro</p>
+                        <a href="proyecto9.html" class="btn-ver-mas">Ver proyecto</a>
+                    </div>
+                </article>
+
+            </div> <!-- Cierra projects-track -->
+        </div> <!-- Cierra projects-container -->
+    </div> <!-- Cierra projects-viewport -->
+</section>
+
+ <!-- SECCIÓN CLIENTES -->
+ <section id="clientes" class="clients-section">
+    <div class="section-header">
+        <span class="section-label">02 — Clientes</span>
+        <h2 class="portfolio__heading">Confían en nosotros</h2>
+    </div>
+
+    <div class="clients-viewport">
+        <div class="clients-track">
+            <div class="client-card">Intendencia de Colonia</div>
+            <div class="client-card">Colonia +</div>
+            <div class="client-card">Hotel Radisson Colonia</div>
+            <div class="client-card">Zona Franca Colonia</div>
+            <div class="client-card">Hotel Italiano</div>
+            <div class="client-card">Cervecería Barbot</div>
+            <div class="client-card">Plaza de Toros</div>
+            <div class="client-card">Abitab</div>
+            <div class="client-card">Club Plaza Colonia</div>
+
+            
+        </div>
+    </div>
+</section>
+
+
+<!-- SECCIÓN NUESTRO EQUIPO -->
+
+
+<section id="equipo" class="team-section">
+    <div class="section-header">
+        <span class="section-label">04 — Nuestro Equipo</span>
+        <h2 class="portfolio__heading">Las Personas Detrás del Hierro</h2>
+    </div>
+
+    <div class="team-grid">
+        <article class="team-card">
+            <div class="team-card__img-wrap">
+                <img src="./img/equipo1.jpg" alt="Nombre y Apellido" class="team-card__img" onerror="this.nextElementSibling.style.display='flex'; this.style.display='none'">
+                <div class="team-card__placeholder">Foto del Equipo 1</div>
+            </div>
+            <div class="team-card__info">
+                <h3 class="team-card__name">José Ardusso</h3>
+                <p class="team-card__role">Maestro Herrero · Fundador</p>
+                <p class="team-card__bio">Más de 30 años perfeccionando el arte de la forja. Especialista en estructuras complejas y diseño personalizado.</p>
+            </div>
+        </article>
+
+        <article class="team-card">
+            <div class="team-card__img-wrap">
+                <img src="./img/equipo2.jpg" alt="Nombre y Apellido" class="team-card__img" onerror="this.nextElementSibling.style.display='flex'; this.style.display='none'">
+                <div class="team-card__placeholder">Foto del Equipo 2</div>
+            </div>
+            <div class="team-card__info">
+                <h3 class="team-card__name">Franco Ardusso</h3>
+                <p class="team-card__role">Diseñador · Técnico en Soldadura</p>
+                <p class="team-card__bio">Formado en diseño industrial. Aporta la mirada contemporánea que fusiona estética y funcionalidad en cada pieza.</p>
+            </div>
+        </article>
+    </div>
+</section>
+
+
+<!-- SECCIÓN NUESTRA HISTORIA -->
+
+<section id="historia" class="about">
+    <div class="section-header">
+        <span class="section-label">05 — El Legado</span>
+        <h2 class="section-title">Donde el tiempo se detiene a martillar</h2>
+    </div>
+
+    <div class="about__layout">
+        <div class="about__image-col">
+            <div class="about__sticky-wrapper">
+                <img src="img/taller.jpg" alt="Origen Ardusso" class="about__img">
+                <p class="about__caption">Est. 1997 — El primer taller familiar.</p>
+            </div>
+        </div>
+
+        <div class="about__content-col">
+            <div class="about-card">
+                <h3 class="about-card__title">El Origen</h3>
+                <div class="about-card__body">
+                    <p>Nuestra historia no nació en una oficina, sino en el <strong>galpón del padre de José</strong>. Allí, entre libros de estudio y el olor a metal frío, José dio sus primeros pasos.</p>
+                </div>
+            </div>
+
+            <div class="about-card">
+                <h3 class="about-card__title">Misión</h3>
+                <div class="about-card__body">
+                    <p>Crear piezas que trasciendan la utilidad, fabricadas con la calma que exige la verdadera calidad artesanal uruguaya.</p>
+                </div>
+            </div>
+
+            <div class="about-card">
+                <h3 class="about-card__title">Visión</h3>
+                <div class="about-card__body">
+                    <p>Ser el estudio de forja de referencia en el litoral, elevando la identidad del hierro nacional a través del diseño.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- SECCIÓN FOOTER -->
+
+<footer class="apple-footer">
+    <div class="footer-container">
+        <div class="footer-grid">
+            
+            <div class="footer-brand">
+                <h2 class="footer-logo-main">HERRERÍA ARDUSSO</h2>
+                <p class="footer-logo-tagline">FORJA Y DISEÑO PROFESIONAL</p>
+            </div>
+
+            <div class="directory-column">
+                <h3 class="directory-title">Navegación</h3>
+                <ul class="directory-list">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#equipo">Equipo</a></li>
+                    <li><a href="#historia">Historia</a></li>
+                </ul>
+            </div>
+            
+          <!--    <div class="directory-column">
+                <h3 class="directory-title">Código y Redes</h3>
+                <ul class="directory-list">
+                    <li><a href="https://github.com/inkeardusso/coder-house-proyecto/upload/main" target="_blank" style="color: #2997ff; font-weight: bold;">GitHub (Repositorio)</a></li>
+                    <li><a href="[https://www.instagram.com/inkeardusso/](https://www.instagram.com/inkeardusso/)" target="_blank">Instagram</a></li>
+                    <li><a href="[https://www.facebook.com/inke.ardusso](https://www.facebook.com/inke.ardusso)" target="_blank">Facebook</a></li>
+                </ul>
+            </div>
+        </div>-->
+
+            <!-- Columna 3: Contacto -->
+            <div class="directory-column">
+                <h3 class="directory-title">Contacto</h3>
+                <ul class="directory-list">
+                    <li><a href="[https://mail.google.com/mail/?view=cm&fs=1&to=herreria.ardusso@gmail.com](https://mail.google.com/mail/?view=cm&fs=1&to=herreria.ardusso@gmail.com)" target="_blank" style=" font-weight: bold;">Email</a></li>                  
+                    <li><a href="https://instagram.com/francoardusso/" target="_blank">Instagram</a></li>
+                    <li><a href="https://facebook.com/franco.ardusso" target="_blank">Facebook</a></li>
+                    <li><a href="https://www.google.com/maps/place/HERRERIA+ARDUSSO/@-34.4489804,-57.8414139,17z/data=!3m1!4b1!4m6!3m5!1s0x95a31352e96b87c3:0xbb3be165ed3dbb83!8m2!3d-34.4489804!4d-57.838839!16s%2Fg%2F11svt7kvqd?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank">Google Maps</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <section class="footer-bottom">
+            <div class="footer-legal">
+                <span class="legal-copyright">© 2026 Herrería Ardusso. Todos los derechos reservados.</span>
+                <div class="legal-country">Uruguay</div>
+            </div>
+        </section>
+    </div>
+</footer>
+
+
+    <!-- SECCIÓN JAVA SCRIPT -->
+
+
+    <script>
+// --- LÓGICA DEL HERO (PORTADA) ---
+
+// --- LÓGICA DEL CARRUSEL HERO ---
+let currentHeroSlide = 0;
+let heroInterval;
+
+function showHeroSlide(index) {
+    const slides = document.querySelectorAll('#heroCarousel .carousel__slide');
+    const dots = document.querySelectorAll('#heroDots .carousel__dot');
+    
+    if (index >= slides.length) currentHeroSlide = 0;
+    else if (index < 0) currentHeroSlide = slides.length - 1;
+    else currentHeroSlide = index;
+
+    // Quitar 'active' de todos
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+
+    // Poner 'active' al actual
+    slides[currentHeroSlide].classList.add('active');
+    dots[currentHeroSlide].classList.add('active');
+}
+
+// Función para botones Prev/Next
+function moveCarousel(type, step) {
+    if (type === 'hero') {
+        showHeroSlide(currentHeroSlide + step);
+        resetHeroTimer();
+    }
+}
+
+// Función para los Dots
+function goToSlide(type, index) {
+    if (type === 'hero') {
+        showHeroSlide(index);
+        resetHeroTimer();
+    }
+}
+
+// Auto-play para el Hero (cada 5 segundos)
+function startHeroTimer() {
+    heroInterval = setInterval(() => {
+        moveCarousel('hero', 1);
+    }, 5000);
+}
+
+function resetHeroTimer() {
+    clearInterval(heroInterval);
+    startHeroTimer();
+}
+
+// Iniciar al cargar
+document.addEventListener('DOMContentLoaded', () => {
+    startHeroTimer();
+});
+
+
+
+
+// SECCION PROYECTOS
+
+const track = document.getElementById('projectsTrack');
+let isMoving = false;
+let autoPlayInterval; // Variable para controlar el reloj
+
+function moveProjects(direction) {
+    if (isMoving) return; 
+    isMoving = true;
+
+    // Resetear el reloj inmediatamente cuando el usuario hace click
+    resetAutoPlay();
+
+    const cards = track.querySelectorAll('.project-card');
+    const cardWidth = cards[0].offsetWidth + 25; 
+
+    track.style.transition = 'transform 0.5s cubic-bezier(0.25, 1, 0.5, 1)';
+
+    if (direction === 1) {
+        track.style.transform = `translateX(-${cardWidth}px)`;
+        setTimeout(() => {
+            track.style.transition = 'none';
+            track.appendChild(track.firstElementChild);
+            track.style.transform = 'translateX(0)';
+            isMoving = false;
+        }, 500);
+    } else {
+        track.style.transition = 'none';
+        track.insertBefore(track.lastElementChild, track.firstElementChild);
+        track.style.transform = `translateX(-${cardWidth}px)`;
+        setTimeout(() => {
+            track.style.transition = 'transform 0.5s cubic-bezier(0.25, 1, 0.5, 1)';
+            track.style.transform = 'translateX(0)';
+            isMoving = false;
+        }, 10);
+    }
+}
+
+// Función para iniciar el auto-play
+function startAutoPlay() {
+    autoPlayInterval = setInterval(() => {
+        moveProjects(1);
+    }, 3500); // 3.5 segundos
+}
+
+// Función para matar el reloj viejo y crear uno nuevo de cero
+function resetAutoPlay() {
+    clearInterval(autoPlayInterval);
+    startAutoPlay();
+}
+
+
+
+// --- CARGAR SECCIÓN EQUIPO ---
+// Usamos una función asíncrona para manejar la carga
+async function cargarEquipo() {
+    try {
+        const response = await fetch('equipo.html');
+        if (response.ok) {
+            const data = await response.text();
+            document.getElementById('equipo-placeholder').innerHTML = data;
+        }
+    } catch (error) {
+        console.error("Error cargando equipo.html: ", error);
+    }
+}
+
+
+// --- CONTROL DE INICIO ---
+document.addEventListener('DOMContentLoaded', () => {
+    startAutoPlay(); // Inicia el carrusel de proyectos
+    cargarEquipo();  // Inicia la carga del equipo
+});
+</script>
+</body> </html> 

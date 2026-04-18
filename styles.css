@@ -1,0 +1,1225 @@
+/* =========================================
+   VARIABLES Y CONFIGURACIÓN (Root)
+   ========================================= */
+   
+:root {
+    --iron-black: rgb(26, 26, 27);
+    --rust-accent: rgb(165, 75, 36);
+    --brick-background: rgb(244, 241, 237);
+    --wood-dark: rgb(61, 43, 31);
+    --off-white: rgb(255, 255, 255);
+    --grey-mid: rgb(136, 136, 136);
+    --grey-light: rgb(220, 218, 214);
+
+    :root {
+    --apple-footer-bg: #161617; /* El negro exacto de Apple */
+    --apple-text-main: #f5f5f7;
+    --apple-text-dim: #86868b;
+    --apple-text-link: #2997ff;
+    --apple-divider: #424245;
+}
+
+
+    /* --- CONFIGURACIÓN DE TIPOGRAFÍA --- */
+    
+    /* Agdasima: Muy condensada y alta, perfecta para el Logo y H1 */
+    --font-industrial: 'Agdasima', sans-serif; 
+    
+    /* Syne: Para títulos de secciones (01-PROYECTOS) por su peso visual */
+    --font-accent: 'Syne', sans-serif;
+    
+    /* Inter: Para toda la lectura técnica, menú y datos de contacto */
+    --font-clean: 'Inter', sans-serif;
+
+    --transition: all 0.3s ease;
+    --max-width: 87.5rem;
+}
+
+/* =========================================
+   RESET
+   ========================================= */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: var(--font-clean);
+    line-height: 1.6;
+    background-color: var(--brick-background);
+    color: var(--iron-black);
+}
+
+img { max-width: 100%; display: block; }
+
+/* Grain overlay */
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+    opacity: 0.04;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+
+/* =========================================
+   ESTRUCTURA INTEGRADA (HEADER + NAV)
+   ========================================= */
+
+
+.main-interface {
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+}
+
+/* Header Superior - Fondo Negro Industrial */
+.header-industrial {
+    background-color: var(--iron-black);
+    padding: 1.5rem 5%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.header__container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-main {
+    font-family: var(--font-industrial);
+    font-size: 1.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--off-white);
+    letter-spacing: 0.1rem;
+    line-height: 1;
+}
+
+.logo-tagline {
+    font-family: var(--font-clean);
+    font-size: 0.7rem;
+    letter-spacing: 0.3rem;
+    color: var(--rust-accent);
+    margin-top: 0.3rem;
+    font-weight: 700;
+}
+
+/* Bloque de contacto derecho */
+.header__info-right {
+    text-align: left;
+    font-family: var(--font-clean);
+    font-size: 0.75rem;
+}
+
+.info-label {
+    color: var(--grey-mid);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-right: 0.4rem;
+}
+
+.info-text {
+    color: var(--off-white);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.info-text:hover { color: var(--rust-accent); }
+
+/* Nav Bar - El efecto Glassmorphism de Apple */
+.nav-apple {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.85); /* Fondo blanco traslúcido */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 0.8rem 0;
+    z-index: 999;
+}
+
+.nav__container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.nav__list {
+    display: flex;
+    gap: 0.6rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Botones Cápsula Apple */
+.nav__btn {
+    text-decoration: none !important;
+    color: rgba(26, 26, 27, 0.9) !important;
+    font-family: var(--font-clean);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 980px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: transparent;
+}
+
+/* Animación Hover Awwwards */
+.nav__btn:hover {
+    background-color: var(--rust-accent) !important;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(165, 75, 36, 0.2);
+}
+
+/* Botón Contacto Destacado */
+.nav__btn--highlight {
+    background-color: var(--iron-black) !important;
+    color: #ffffff !important;
+}
+
+.nav__btn--highlight:hover {
+    background-color: var(--rust-accent) !important;
+}
+
+/* Fix para móvil */
+@media (max-width: 768px) {
+    .header__container { flex-direction: column; gap: 1rem; text-align: center; }
+    .header__info-right { text-align: center; }
+    .nav__list { flex-wrap: wrap; justify-content: center; gap: 0.3rem; }
+    .nav__btn { padding: 0.4rem 0.8rem; font-size: 0.6rem; }
+}
+
+/* =========================================
+   HERO CAROUSEL - ESTILO INDUSTRIAL
+   ========================================= */
+
+/* 1. Contenedor Principal */
+.hero {
+    position: relative;
+    height: 100vh; /* Ocupa el alto total de la pantalla */
+    min-height: 35rem; /* Evita que se colapse en pantallas muy pequeñas */
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--iron-black);
+}
+
+.carousel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.carousel__track {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* 2. Diapositivas (Slides) */
+.carousel__slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: opacity 1s ease-in-out, visibility 1s;
+    z-index: 1;
+}
+
+.carousel__slide.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+}
+
+/* Overlay industrial: Degradado para legibilidad del texto */
+.carousel__slide::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 100%);
+    z-index: 3;
+}
+
+/* 3. Bloque de Información y Textos */
+.hero__info {
+    position: relative;
+    z-index: 10;
+    padding-left: 8%;
+    max-width: 50rem; /* Limita el ancho del texto para mejor lectura */
+    text-align: left;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.hero__eyebrow {
+    font-family: var(--font-clean);
+    font-size: 0.8rem;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    color: var(--rust-accent);
+    margin-bottom: 1rem;
+    display: block;
+    font-weight: 600;
+}
+
+/* Siguiendo la regla de oro: Legibilidad en mobile vs Impacto en Desktop */
+.title--large {
+    display: block;
+    font-family: var(--font-industrial);
+    /* Bajamos el tamaño: máximo 7rem en lugar de 12rem */
+    font-size: clamp(2.5rem, 8vw, 7rem); 
+    font-weight: 900;
+    line-height: 0.6;
+    text-transform: uppercase;
+    color: #ffffff !important;
+}
+
+.title--small {
+    display: block;
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    color: var(--rust-accent);
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+}
+
+/* --- TEXTO DEL HERO (Cuerpo) --- */
+.hero__text {
+    font-family: var(--font-clean);
+    /* En mobile 1.1rem, en escritorio sube a 1.25rem */
+    font-size: clamp(1.1rem, 2vw, 1.25rem); 
+    color: var(--grey-light);
+    line-height: 1.6; /* Espaciado generoso para lectura rápida */
+    margin-top: 0.8rem; /* Juega con este valor para alejarlo de "Familiar Ardusso" */
+    margin-bottom: 2.5rem; /* Esto lo aleja del BOTÓN Apple */    max-width: 40rem;
+}
+
+/* =========================================
+   FLECHAS DEL CARRUSEL (ESTILO APPLE)
+   ========================================= */
+.carousel__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 30;
+    
+    /* Forma y Tamaño */
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%; /* Totalmente circulares estilo Apple */
+    
+    /* Estética de Vidrio (Glassmorphism) */
+    background: rgba(255, 255, 255, 0.1); /* Transparencia clara */
+    backdrop-filter: blur(10px); /* El difuminado del fondo */
+    -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
+    
+    /* Borde y Color */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    
+    /* Icono centralizado */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    
+    /* Animación suave */
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Efecto al pasar el mouse (Hover) */
+.carousel__btn:hover {
+    background: var(--rust-accent); /* Tu naranja rústico */
+    border-color: var(--rust-accent);
+    transform: translateY(-50%) scale(1.1); /* Se agranda un poquito */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+/* Posicionamiento */
+.carousel__btn--prev { 
+    left: 2rem; 
+}
+
+.carousel__btn--next { 
+    right: 2rem; 
+}
+
+/* =========================================
+   INDICADORES (DOTS) ESTILO APPLE
+   ========================================= */
+
+.carousel__dots {
+    position: absolute;
+    bottom: 2.5rem; /* Subimos un poquito para que respiren */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 30;
+    display: flex;
+    gap: 12px; /* Espaciado elegante */
+    align-items: center;
+}
+
+.carousel__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    
+    /* Look Apple: Blanco con mucha transparencia */
+    background-color: rgba(255, 255, 255, 0.3);
+    
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.4s ease; /* Transición suave */
+}
+
+/* El punto activo: aumenta opacidad y se estira un poco */
+.carousel__dot.active {
+    background-color: rgba(255, 255, 255, 0.9); /* Casi blanco sólido pero fino */
+    width: 24px; /* Efecto cápsula minimalista */
+    border-radius: 10px;
+}
+
+/* Efecto hover sutil */
+.carousel__dot:hover:not(.active) {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+/* --- BOTÓN (Basado en accesibilidad táctil) --- */
+/* --- Botón Estilo Apple Rústico --- */
+.btn--apple {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: var(--rust-accent);
+    color: #ffffff;
+    text-decoration: none; /* Quita el subrayado */
+    font-family: var(--font-clean);
+    font-weight: 600;
+    font-size: 1rem;
+    
+    /* El "Apple Look": bordes muy redondeados */
+    border-radius: 980px; 
+    
+    /* Sombra estilo Apple: Suave, difuminada y elegante */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), 
+                0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+    
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    cursor: pointer;
+}
+
+.btn--apple:hover {
+    background-color: #b85a2e; /* Un naranja un poco más claro al pasar el mouse */
+    transform: scale(1.05); /* Efecto de expansión suave de Apple */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    text-decoration: none;
+}
+
+.btn--apple:active {
+    transform: scale(0.98); /* Se hunde un poquito al clickear */
+}
+
+/* Ocultar en móviles para evitar que estorben el texto (Opcional) */
+@media (max-width: 48rem) {
+    .carousel__btn {
+        width: 2.8rem;
+        height: 2.8rem;
+        font-size: 1.2rem;
+        left: 1rem;
+    }
+    .carousel__btn--next {
+        right: 1rem;
+    }
+}
+/* 7. Animaciones y Media Queries */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(1.5rem); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 48rem) {
+    .hero { height: 90vh; }
+    .hero__info { padding-left: 5%; padding-right: 5%; }
+    .carousel__btn { display: none; } /* Ocultamos flechas en móviles para no tapar texto */
+    .carousel__dots { bottom: 1rem; }
+}
+
+@media (min-width: 768px) {
+    .hero__info {
+        padding-left: 10%; /* Más aire a la izquierda en monitores */
+    }
+
+    .title--small {
+        /* Subtítulo más pequeño que el principal para crear jerarquía */
+        font-size: clamp(1.5rem, 3vw, 2.5rem); 
+        letter-spacing: 0.2rem;
+    }
+
+    .btn--primary:hover {
+        background-color: transparent;
+        transform: translateY(-5px); /* Feedback visual premium */
+        box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+}
+/* =========================================
+   SECTION HEADER (shared)
+   ========================================= */
+.section-header {
+    max-width: var(--max-width);
+    margin: 0 auto 3rem;
+    padding: 0 5%;
+}
+
+.section-label {
+    display: block;
+    font-family: var(--font-clean);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    color: var(--rust-accent);
+    margin-bottom: 0.5rem;
+}
+
+
+
+/* =========================================
+   PROYECTOS (Carousel horizontal)
+   ========================================= */
+
+/* 1. Contenedor principal de la sección */
+
+/* El título grande (SELECCIÓN DE TRABAJOS) */
+
+/* --- SECCIÓN PROYECTOS EN MODO OSCURO --- */
+
+/* --- SECCIÓN PROYECTOS EN MODO OSCURO --- */
+#proyectos {
+    background-color: #000000 !important; /* Cambié el color a Iron Black puro como pediste antes */
+    padding: 40px 0; /* Bajamos de 100px a 40px para que suba el bloque */
+    margin-top: -20px; /* Margen negativo opcional si quieres "pegarlo" más al hero */
+    transition: background-color 0.4s ease;
+}
+
+/* El contenedor de los títulos (01 Proyectos / Selección de trabajos) */
+.section-header {
+    padding-top: 0 !important; /* Quitamos los 60px que lo empujaban hacia abajo */
+    margin-bottom: 40px !important; /* Espacio prolijo antes de que empiecen las fotos */
+    text-align: left;
+    padding-left: 5%; 
+    font-weight: 400;
+}
+
+.portfolio__heading {
+    font-family: var(--font-accent);
+    font-size: 3.5rem !important;
+    font-weight: 800;
+    color: #ffffff; /* Aseguramos que sea blanco para el modo oscuro */
+    text-transform: uppercase;
+    line-height: 0.9; /* Más apretado estilo Apple */
+    letter-spacing: -2px;
+    margin: 0;
+    margin-top: 0.2rem; /* Espacio mínimo con el '01 — Proyectos' */
+}
+
+/* Contenedor principal para centrar la sección */
+.projects-viewport {
+    position: relative;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 60px; /* Espacio para que las flechas no pisen las fotos */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Este es el que corta lo que sobra */
+.projects-container {
+    overflow: hidden; 
+    width: 100%;
+    display: block;
+    justify-content: flex-start;
+}
+
+/* Contenedor principal de la card */
+
+.project-card {
+    position: relative;
+    border-radius: 20px; /* Redondea toda la tarjeta */
+    overflow: hidden; /* Importante para que la imagen se corte en las esquinas superiores */
+    min-width: 350px !important;
+    height: 720px !important; /* Aumentamos un poco el alto total */
+    background-color: #f2f2ff; /* Un gris profundo, menos agresivo que el negro */    display: flex !important; /* Activamos el modo pila */
+    flex-direction: column !important; /* Imagen arriba, texto abajo */
+    
+    box-shadow: 0 4px 20px rgba(13, 13, 13, 0.05);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+                box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* El contenedor de la imagen ocupa el 70% de la tarjeta */
+.project-card__img-wrap {
+    position: relative !important; /* Ya no flota sobre el texto */
+    width: 100% !important;
+    height: 520px !important; /* Altura fija para la imagen */
+    background-size: cover !important;
+    background-position: center !important;
+    flex-shrink: 0; /* Que no se achique */
+}
+
+/* El bloque de información ocupa el resto (abajo, sobre fondo blanco limpio) */
+
+.project-card__info {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea todo el contenido a la izquierda */
+    padding: 20px 25px;
+    background-color: #f2f2ff; /* El gris que querías para las cards */
+    border-radius: 0 0 20px 20px;
+}   
+
+
+
+.project-card__desc {
+    font-family: var(--font-clean);
+    color: #121214;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+/* Animación de elevación */
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.project-card__image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px; /* Un toque suave */
+    overflow: hidden;
+}
+
+/* La línea de tarjetas */
+.projects-track {
+   display: flex !important;
+    gap: 25px !important;
+    width: max-content !important;
+    transform: translateX(0); /* Siempre empezamos en cero */
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* El contenedor de texto flotante */
+.project-card__overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Blanco semi-transparente */
+    backdrop-filter: blur(10px); /* Efecto de vidrio esmerilado */
+    padding: 25px;
+    border-radius: 2px;
+    transform: translateY(0);
+    transition: transform 0.4s ease;
+}
+
+
+/* Título estilo Suizo */
+.project-card__title {
+    font-family: var(--font-accent); /* <--- Faltaba el punto y coma aquí */
+    font-size: 1.4rem;
+    font-weight: 800;               /* <--- Corregido: el máximo es 900 (1540 no existe) */
+    color: #242121;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+/* Botón minimalista */
+.btn-card-minimal {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--rust-accent);
+    font-family: var(--font-clean);
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    transition: gap 0.3s ease;
+}
+
+.btn-card-minimal span {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.btn-card-minimal:hover span {
+    transform: translateX(5px);
+}
+
+/* Estilo de los botones laterales (flechas) */
+.proj-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: var(--iron-black);
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.carousel__btn--prev { left: 0; }
+.carousel__btn--next { right: 0; }
+
+
+.btn-ver-mas {
+    /* Mantenemos tu color óxido */
+    background-color: var(--rust-accent);
+    color: #ffffff !important;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    
+    /* Mantenemos el look cápsula redondo */
+    border-radius: 980px; 
+    
+    padding: 10px 20px !important; /* Más angosto verticalmente */
+    display: inline-block !important; /* Clave: el ancho depende del texto */
+    
+    /* CAMBIO 3: CENTRAR EL BOTÓN DENTRO DE LA CAJA */
+    align-self: left
+    ; /* Funciona porque el contenedor padre (.project-card__info) es flex */
+    
+    transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+    cursor: pointer;
+    border: none;
+}
+
+/* Efecto Hover sutil (opcional) */
+.btn-ver-mas:hover {
+    filter: brightness(1.1); /* Brilla un poquito al pasar el mouse */
+    transform: scale(1.02); /* Un crecimiento casi imperceptible */
+}
+
+
+
+.project-card__desc {
+    font-size: 0.85rem;
+    color: #414141;
+    margin-bottom: 1.2rem;
+    font-family: var(--font-clean);
+    font-weight:500;
+    line-height: 1.4;
+    }
+/* El wrap de la imagen DEBE tener altura para que el background-image funcione */
+.project-card__img-wrap {
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+}
+
+/* =========================================
+   CLIENTES
+   ========================================= */
+
+   #clientes {
+    background-color: #000000 !important; /* Fuerza el fondo a Iron Black */
+    padding: 100px 0;
+    transition: background-color 0.4s ease;
+}
+
+   /* Sección Clientes */
+.clients-section {
+    padding: 100px 0;
+    background-color: #000000;
+    overflow: hidden;
+}
+
+.clients-viewport {
+    width: 100%;
+    padding: 20px 5%;
+    overflow: hidden;
+}
+
+.clients-track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    /* Animación automática opcional si no querés usar JS */
+    animation: scrollClients 30s linear infinite;
+}
+
+.client-card {
+    min-width: 280px; /* Más larga */
+    height: 100px;    /* Poco ancha (baja) */
+    background:var(--iron-black);
+    border: 1px solid #eee;
+    border-radius: 50px; /* Corners totalmente redondeados estilo Apple */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 30px;
+    
+    /* Tipografía */
+    font-family: var(--font-clean);
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 1rem;
+    text-align: center;
+    
+    /* Sombra sutil */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    transition: all 0.3s ease;
+}
+
+.client-card:hover {
+    background: #b85a2e;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    border-color: var(--rust-accent);
+}
+
+/* Animación de scroll infinito automático */
+@keyframes scrollClients {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+
+
+
+/* =========================================
+   EQUIPO
+   ========================================= */
+  #equipo {
+    background-color: #000000 !important; /* Fuerza el fondo a Iron Black */
+    padding: 100px 0;
+    transition: background-color 0.4s ease;
+    }
+
+
+/* Estilo específico para el título de la sección de Equipo */
+#equipo .section-title {
+ color: #ffffff !important;
+    font-size: 5rem !important; /* Prueba con 5rem primero, 40rem es gigante */
+    text-transform: uppercase !important;
+    line-height: 0.9 !important;
+    display: block !important;
+}
+
+/* También ajustamos el número (04 — Nuestro Equipo) para que combine */
+#equipo .section-label {
+    color: var(--rust-accent);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+
+/* Contenedor de la cuadrícula de equipo */
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 0 5%;
+    flex-wrap: wrap; /* Para que en móviles se pongan una debajo de otra */
+}
+
+/* La Card de Equipo: Más grande y robusta */
+.team-card {
+    width: 450px;
+    height: 700px; /* Un poco más de aire para la descripción */
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Contenedor de la Imagen (Ocupa la parte superior) */
+.team-card__img-wrap {
+    width: 100%;
+    height: 65%; /* Ocupa más espacio para el retrato */
+    background-size: cover;
+    
+    /* ESTO CORRIGE LAS CARAS: */
+    background-position: center 10%; 
+    
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+    flex-shrink: 0;
+}
+
+
+/* Contenedor de Texto (Ocupa la parte inferior) */
+.team-card__info {
+    flex-grow: 1;
+    padding: 30px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Estilos de los textos del equipo */
+.team-card__name {
+    font-family: var(--font-accent);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--iron-black);
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.team-card__role {
+    font-family: 'Inter', sans-serif;
+    color: #b85a2e; /* Tu color rust/óxido */
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.team-card__desc {
+    font-family: var(--font-clean);
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Animación de elevación Apple */
+.team-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+}
+
+.team-card__bio {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* =========================================
+   HISTORIA
+   ========================================= */
+
+ #historia {
+    background-color: #000000 !important; /* Fuerza el fondo a Iron Black */
+    padding: 100px 0;
+    transition: background-color 0.4s ease;
+    }
+
+.about {
+    padding: 100px 0; /* Espacio vertical generoso */
+    background-color: var(--brick-background);
+}
+
+
+/* Unificación de estilos de encabezado */
+.about__heading {
+    font-family: var(--font-accent); /* Syne */
+    font-size: 3rem;                /* O el tamaño que uses en Proyectos */
+    text-transform: uppercase;
+    color: var(--iron-black);
+    margin-top: 1rem;
+    line-height: 1.1;
+}
+
+.about__layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr; /* Imagen izquierda, texto derecha */
+    gap: 80px;
+    max-width: var(--max-width); /* ESTO CENTRA EL CONTENIDO */
+    margin: 0 auto;
+    padding: 0 5%; /* Margen de seguridad para que no toque los bordes */
+    align-items: start;
+}
+
+/* Columna de Imagen Sticky */
+.about__image-col {
+    position: sticky;
+    top: 120px;
+}
+
+.about__img {
+    width: 100%;
+    filter: grayscale(100%);
+    border-radius: 4px;
+    transition: filter 0.5s ease;
+}
+
+.about__img:hover {
+    filter: grayscale(0%);
+}
+
+.about__caption {
+    font-family: var(--font-clean);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 15px;
+    color: #ffffff
+}
+
+/* Columna de Contenido: Jerarquía de Colores y Textos */
+.about__content-col {
+    display: flex;
+    flex-direction: column;
+    gap: 60px; /* Espacio entre Origen, Misión y Visión */
+}
+
+/* Unificación de los 3 bloques */
+.about-card__title {
+    font-family: var(--font-accent); /* Syne */
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: var(--rust-accent); /* COLOR ÓXIDO PARA JERARQUÍA */
+    margin-bottom: 25px; /* Espacio punto y aparte */
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Línea sutil suiza antes del título */
+.about-card__title::before {
+    content: "";
+    width: 30px;
+    height: 1px;
+    background-color: var(--rust-accent);
+}
+
+.about-card__body p {
+    font-family: var(--font-clean);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ffffffe0;
+    margin-bottom: 20px;
+    text-wrap: pretty;
+}
+
+/* Esto hace que el título de Historia sea igual al de Equipo y Proyectos */
+.section-header {
+    max-width: var(--max-width);
+    margin: 0 auto 60px auto; /* Espacio suizo entre título y contenido */
+    padding: 0 5%;
+}
+
+.section-title {
+    font-family: var(--font-accent); /* Syne */
+    font-size: clamp(2rem, 4vw, 2rem); /* Tamaño Apple: grande y negrita */
+    text-transform: uppercase;
+    line-height: 1;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* Ajuste del layout para que respete el margen del título */
+.about__layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+
+.about__content-col {
+    display: flex;
+    flex-direction: column;
+    gap: 60px; /* Esto da aire entre Origen, Misión y Visión */
+    padding-bottom: 50px; /* Espacio al final para que no corte abrupto */
+}
+
+.about-card {
+    display: block !important; /* Asegura que sean visibles */
+    opacity: 1 !important;
+}
+
+
+/* Responsive */
+@media (max-width: 968px) {
+    .about__layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .about__image-col {
+        position: relative;
+        top: 0;
+    }
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+
+
+.apple-footer {
+    background-color: #161617; /* El negro de Apple */
+    color: #86868b;
+    padding: 60px 0 30px;
+    border-top: 1px solid #424245;
+}
+
+.footer-container {
+    max-width: 980px; /* Ancho contenido Apple */
+    margin: 0 auto;
+    padding: 0 22px;
+}
+
+/* Grilla de 3 columnas */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* --- COLUMNA 1: BRANDING --- */
+.footer-logo-main {
+    font-family: var(--font-industrial); /* Tu fuente Agdasima */
+    font-size: 1.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #f5f5f7;
+    letter-spacing: 0.1rem;
+    line-height: 1;
+    margin: 0;
+}
+
+.footer-logo-tagline {
+    font-family: var(--font-clean, sans-serif);
+    font-size: 0.7rem;
+    letter-spacing: 0.3rem;
+    color: var(--rust-accent); /* Tu color óxido */
+    margin-top: 0.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* --- COLUMNAS 2 Y 3: LISTAS --- */
+.directory-title {
+    color: #f5f5f7;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.directory-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.directory-list li {
+    margin-bottom: 10px;
+}
+
+.directory-list a {
+    color: #86868b;
+    text-decoration: none;
+    font-size: 12px;
+    transition: color 0.2s ease;
+}
+
+.directory-list a:hover {
+    color: #f5f5f7; /* Brillo al pasar el mouse */
+}
+
+/* --- SECCIÓN INFERIOR --- */
+.footer-bottom {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #424245;
+}
+
+.footer-legal {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #6e6e73;
+}
+
+
+
+/* --- Adaptabilidad Móvil --- */
+@media (max-width: 768px) {
+    .footer-directory {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .directory-column {
+        width: 100%;
+        border-bottom: 1px solid #424245;
+        padding: 10px 0;
+    }
+
+    .directory-title {
+        margin-bottom: 0;
+        cursor: pointer;
+    }
+
+    /* En móvil Apple suele ocultar las listas o apilarlas */
+    .directory-list {
+        padding-top: 10px;
+    }
+
+    .footer-legal {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .legal-country {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+}

@@ -1,0 +1,71 @@
+<section id="inicio" class="hero">
+    <div class="carousel" id="heroCarousel">
+        <div class="carousel__track">
+            
+            <div class="carousel__slide active" style="background-image: url('img/hero1.jpg');">
+                <div class="hero__info">
+                     <h3 class="hero__title">
+                         <span class="title--large">Maestros</span> <span class="title--small">del Hierro y el Fuego</span> </h3>
+                    <p class="hero__text">Soluciones de herrería artesanal para proyectos únicos.</p>
+                    <a href="#proyectos" class="btn btn--apple">Ver Proyectos</a> </div>
+            </div>
+            </div>
+
+            <div class="carousel__slide" style="background-image: url('img/hero2.jpg');">
+                <div class="hero__info">
+                    <h3 class="hero__title">
+                        <span class="title--large">Forja</span>
+                        <span class="title--small">Industrial y Diseño</span>
+                    </h3>
+                    <p class="hero__text">Estructuras sólidas con acabados de precisión técnica.</p>
+                    <a href="#proyectos" class="btn btn--primary">Ver Diseños</a>
+                </div>
+            </div>
+
+            <div class="carousel__slide" style="background-image: url('img/hero3.jpg');">
+                <div class="hero__info">
+                    <h3 class="hero__title">
+                        <span class="title--large">Calidad</span>
+                        <span class="title--small">Certificada</span>
+                    </h3>
+                    <p class="hero__text">Materiales de primera para resultados que perduran.</p>
+                    <a href="#contacto" class="btn btn--primary">Presupuestar</a>
+                </div>
+            </div>
+
+            <div class="carousel__slide" style="background-image: url('img/hero4.jpg');">
+                <div class="hero__info">
+                    <h3 class="hero__title">
+                        <span class="title--large">Tradición</span>
+                        <span class="title--small">Familiar Ardusso</span>
+                    </h3>
+                    <p class="hero__text">Desde 1997 construyendo confianza en Colonia.</p>
+                    <a href="#historia" class="btn btn--primary">Nuestra Historia</a>
+                </div>
+            </div>
+
+            <div class="carousel__slide" style="background-image: url('img/hero5.jpg');">
+                <div class="hero__info">
+                    <h3 class="hero__title">
+                        <span class="title--large">Diseño</span>
+                        <span class="title--small">Arquitectónico</span>
+                    </h3>
+                    <p class="hero__text">Fusionamos la fuerza del metal con la estética moderna.</p>
+                    <a href="#proyectos" class="btn btn--primary">Ver Proyectos</a>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="carousel__btn carousel__btn--prev" onclick="moveCarousel('hero', -1)">&#8249;</button>
+        <button class="carousel__btn carousel__btn--next" onclick="moveCarousel('hero', 1)">&#8250;</button>
+
+        <div class="carousel__dots" id="heroDots">
+            <button class="carousel__dot active" onclick="goToSlide('hero', 0)"></button>
+            <button class="carousel__dot" onclick="goToSlide('hero', 1)"></button>
+            <button class="carousel__dot" onclick="goToSlide('hero', 2)"></button>
+            <button class="carousel__dot" onclick="goToSlide('hero', 3)"></button>
+            <button class="carousel__dot" onclick="goToSlide('hero', 4)"></button>
+        </div>
+    </div>
+</section>
